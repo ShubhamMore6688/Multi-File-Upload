@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { FileUploadService } from '../../services/file-upload.service';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-upload-files',
@@ -20,8 +21,7 @@ export class UploadFilesComponent implements OnInit {
   constructor(private uploadService: FileUploadService) { }
 
   ngOnInit(): void {
-    this.fileInfos = this.uploadService.getFiles();
-  }
+    this.fileInfos = this.uploadService.getFiles();  }
 
   selectFiles(event: any): void {
     this.message = [];
